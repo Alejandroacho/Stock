@@ -17,10 +17,10 @@ app.engine('.hbs', exphbs({
 }));
 app.set('view engine', '.hbs')
 
-//ruta de prueba
-app.get('/',(req,res)=>{
-    res.render('index')
-})
+//rutasWeb
+var routes = require('./routes/routesWeb');
+routes(app);
+
 
 
 module.exports = app;
